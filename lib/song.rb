@@ -21,23 +21,25 @@ class Song
         @@count
     end
 
-    def genres
-        unique_genre = []
-        genres.each do |genre|
-            unique_genre[genre] ||= []
-        end
-        unique_genre
+    def self.genres
+        # unique_genre = []
+        # genres.each do |genre|
+        #     unique_genre[genre] ||= []
+        # end
+        # unique_genre
+        @@genres.uniq
     end
 
-    def artists
-        unique_artist = []
-        artists.each do |artist|
-            unique_artist[artist] ||= []
-        end
-        unique_artist
+    def self.artists
+        # unique_artist = []
+        # artists.each do |artist|
+        #     unique_artist[artist] ||= []
+        # end
+        # unique_artist
+        @@artists.uniq
     end
 
-    def genre_count
+    def self.genre_count
         genre_list = {}
         genres.each do |genre|
             if genre_list.has_key?(genre)
@@ -49,10 +51,10 @@ class Song
         genre_list
     end
 
-    def artist_count
+    def self.artist_count
         artist_list = {}
         artists.each do |artist|
-            if artist_list.has_key?(artist)
+            if artist_list.has_key?(artist) # if artists_list[artist]
                 artist_list[artist] += 1
             elsif
                 artist_list[artist] = 1
@@ -62,7 +64,7 @@ class Song
     end
 
 
-    ninety_nine_problems = Song.new("99 Problems", "Jay-Z", "rap")
-    binding.pry
+    # ninety_nine_problems = Song.new("99 Problems", "Jay-Z", "rap")
+    # binding.pry
 
 end # end Song class
