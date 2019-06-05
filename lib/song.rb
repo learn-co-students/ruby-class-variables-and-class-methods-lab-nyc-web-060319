@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 class Song
 
@@ -65,6 +65,6 @@ class Song
 
 
     ninety_nine_problems = Song.new("99 Problems", "Jay-Z", "rap")
-    binding.pry
+    # binding.pry
 
 end # end Song class
