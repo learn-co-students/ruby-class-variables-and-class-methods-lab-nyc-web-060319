@@ -64,7 +64,7 @@ class Song
     end
 
 
-    # ninety_nine_problems = Song.new("99 Problems", "Jay-Z", "rap")
-    # binding.pry
+    ninety_nine_problems = Song.new("99 Problems", "Jay-Z", "rap")
+    binding.pry
 
 end # end Song class
